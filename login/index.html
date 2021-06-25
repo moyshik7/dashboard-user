@@ -1,13 +1,27 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
-    <body>
-        <div id="info">Login</div>
-        <!-- Cookies library -->
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-        <!-- Main JS files -->
-        <script src="/src/settings.js"></script>
-        <script src="/src/login.js"></script>
-    </body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/login.css" />
+</head>
+<body>
+    <div id="not_logged">
+        <h1>Log in with Discord to continue</h1>
+        <a id="login_btn" href="https://discord.com/api/oauth2/authorize?client_id=748160981766635540&redirect_uri=https%3A%2F%2Fdashboard.plubin.xyz%2Flogin&response_type=code&scope=identify%20guilds">
+            Login
+        </a>
+    </div>
+    <div id="logging_in">
+        <h1>
+            Logging you in
+        </h1>
+    </div>
+    <!-- Cookies library -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Main JS files -->
+    <script src="/src/modal.js"></script>
+    <script src="/src/settings.js"></script>
+    <script src="/src/login.js"></script>
+</body>
 </html>

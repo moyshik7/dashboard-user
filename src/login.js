@@ -1,17 +1,16 @@
 window.onload = () => {
-    document.getElementById("info").innerHTML = "loaded";
     var url = new URL(window.location.href);
     var code = url.searchParams.get("code");
     if (!code) {
-        window.location.href = oauthURL;
-        document.getElementById("info").innerHTML = "No Code";
+        document.getElementById('not_logged').style.display = "block"
+        document.getElementById('logging_in').style.display = "none"
     } else {
-        document.getElementById("info").innerHTML = "Sending request";
+        document.getElementById('not_logged').style.display = "none"
+        document.getElementById('logging_in').style.display = "block"
         window
             .fetch(`${apiURL}?code=${code}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 if (data.code && data.code == 200) {
                     Cookies.set("hash", data.hash);
                     Cookies.set("username", data.user.username);
@@ -21,10 +20,7 @@ window.onload = () => {
                     );
                     window.location.href = `/`;
                 } else {
-                    console.log(data.data)
-                    console.log(data)
-                    document.getElementById("info").innerHTML =
-                        "An error occurred on our side";
+                    ShowModal("Oops something went wrong on the api");
                 }
             });
     }

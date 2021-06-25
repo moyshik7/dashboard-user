@@ -1,0 +1,62 @@
+body {
+    background-color: #2a363b;
+    color: white;
+    font-family: Arial;
+    margin: 5px;
+}
+#not_logged {
+    display: block;
+    text-align: center;
+    border: 1px solid #6665d2;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    width: 85%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#not_logged h1 {
+    width: 100%;
+    margin-bottom: 60px;
+    font-size: 2.15EM;
+    font-weight: 500;
+}
+#not_logged #login_btn {
+    text-decoration: none;
+    font-size: 1.5EM;
+    font-weight: 400;
+    color: white;
+    padding: 10px;
+    padding-left: 1EM;
+    padding-right: 1EM;
+    border-radius: 5px;
+    border: 0px solid white;
+    background-color: #6665d2;
+}
+#logging_in {
+    display: none;
+    text-align: center;
+    border: 1px solid #6665d2;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    width: 85%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#logging_in h1 {
+    width: 100%;
+    font-size: 2.15EM;
+    font-weight: 500;
+}
+@media only screen and (min-width: 800px) {
+    #not_logged {
+        width: 60%;
+    }
+}
