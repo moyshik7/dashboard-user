@@ -20,7 +20,7 @@ window.onload = () => {
                     );
                     window.location.href = `/`;
                 } else {
-                    ShowModal(`Oops something went wrong on the api<br>${data.data}`);
+                    OpenModal(`Oops something went wrong on the api<br>${data.data}`);
                 }
             });
     }
