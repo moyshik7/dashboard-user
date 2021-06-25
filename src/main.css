@@ -1,0 +1,60 @@
+body {
+    margin: 0px;
+}
+#guild_list {
+    width: 100%;
+}
+#guild_list button {
+    width: 100%;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    background-color: #f7d08a;
+    text-align: center;
+    border: 0px solid red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.warn {
+    width: 100%;
+    color: #1e2d2f;
+    border: 0px solid red;
+    border-left: 5px solid #ff6f61;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.warn p {
+    font-size: 1em;
+    padding: 10px;
+}
+.guild_selection {
+    padding: 5px;
+}
+.guild_selection h2 {
+    width: 100%;
+    background-color: #8491a3;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    color: white;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 2em;
+}
+#user {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding-top: 20px;
+}
+#user #username {
+    width: 100%;
+    font-size: 1.75em;
+    text-align: center;
+}
+#user #avatarurl {
+    border-radius: 10px;
+    width: 80%;
+}
