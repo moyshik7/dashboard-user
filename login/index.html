@@ -4,16 +4,28 @@
     <link rel="stylesheet" href="/src/login.css" />
 </head>
 <body>
-    <div id="not_logged">
-        <h1>Log in with Discord to continue</h1>
-        <a id="login_btn" href="https://discord.com/api/oauth2/authorize?client_id=748160981766635540&redirect_uri=https%3A%2F%2Fdashboard.plubin.xyz%2Flogin&response_type=code&scope=identify%20guilds">
-            Login
-        </a>
+    <div id="modal">
+        <div class="cd-popup" role="alert">
+            <div class="cd-popup-container">
+                <p class="cd-popup-text">
+                    Are you sure you want to delete this element?
+                </p>
+                <a href="#0" class="cd-popup-close img-replace">Close</a>
+            </div>
+        </div>
     </div>
-    <div id="logging_in">
-        <h1>
-            Logging you in
-        </h1>
+    <div id="entity_wrapper">
+        <div id="not_logged">
+            <h1>Log in with Discord to continue</h1>
+            <a id="login_btn" href="https://discord.com/api/oauth2/authorize?client_id=748160981766635540&redirect_uri=https%3A%2F%2Fdashboard.plubin.xyz%2Flogin&response_type=code&scope=identify%20guilds">
+                Login
+            </a>
+        </div>
+        <div id="logging_in">
+            <h1>
+                Logging you in
+            </h1>
+        </div>
     </div>
     <!-- Cookies library -->
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
