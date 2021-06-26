@@ -21,17 +21,17 @@ body {
 #not_logged h1 {
     width: 100%;
     margin-bottom: 60px;
-    font-size: 2.15EM;
+    font-size: 2.15em;
     font-weight: 500;
 }
-#not_logged #login_btn {
+.login_btn {
     text-decoration: none;
-    font-size: 1.5EM;
+    font-size: 1.5em;
     font-weight: 400;
     color: white;
     padding: 10px;
-    padding-left: 1EM;
-    padding-right: 1EM;
+    padding-left: 1em;
+    padding-right: 1em;
     border-radius: 5px;
     border: 0px solid white;
     background-color: #6665d2;
@@ -52,7 +52,27 @@ body {
 }
 #logging_in h1 {
     width: 100%;
-    font-size: 2.15EM;
+    font-size: 2.15em;
+    font-weight: 500;
+}
+#logged_in {
+    display: none;
+    text-align: center;
+    border: 1px solid #6665d2;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    width: 85%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#logged_in h1 {
+    width: 100%;
+    margin-bottom: 60px;
+    font-size: 2.15em;
     font-weight: 500;
 }
 @media only screen and (min-width: 800px) {

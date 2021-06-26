@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
 });
 function OpenModal(_blah) {
     if (_blah) {
-        $(".cd-popup-text").text(_blah);
+        $(".cd-popup-text").html(_blah);
     }
     $(".cd-popup").addClass("is-visible");
 }

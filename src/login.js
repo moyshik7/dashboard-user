@@ -1,12 +1,21 @@
 window.onload = () => {
     var url = new URL(window.location.href);
     var code = url.searchParams.get("code");
+    var token = Cookies.get("hash");
+    if (token.length) {
+        document.getElementById("not_logged").style.display = "none";
+        document.getElementById("logging_in").style.display = "none";
+        document.getElementById("logged_in").style.display = "block";
+        return false;
+    }
     if (!code) {
-        document.getElementById('not_logged').style.display = "block"
-        document.getElementById('logging_in').style.display = "none"
+        document.getElementById("not_logged").style.display = "block";
+        document.getElementById("logging_in").style.display = "none";
+        document.getElementById("logged_in").style.display = "none";
     } else {
-        document.getElementById('not_logged').style.display = "none"
-        document.getElementById('logging_in').style.display = "block"
+        document.getElementById("not_logged").style.display = "none";
+        document.getElementById("logging_in").style.display = "block";
+        document.getElementById("logged_in").style.display = "none";
         window
             .fetch(`${apiURL}?code=${code}`)
             .then((res) => res.json())
@@ -20,9 +29,14 @@ window.onload = () => {
                     );
                     window.location.href = `/`;
                 } else {
-                    console.log(data.data)
-                    //OpenModal(`Oops something went wrong on the api<br>${data.data}`);
+                    console.log(data.data);
+                    OpenModal(
+                        `Oops something went wrong on the api<br>${data.data}`
+                    );
                 }
             });
     }
 };
+function LogOut() {
+    Cookies.remove("token");
+}

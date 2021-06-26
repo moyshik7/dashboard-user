@@ -51,7 +51,7 @@ function loadChannels() {
 function UpdateData() {
     var n = Date.now();
     if (n - lastUpdate <= 5 * 1000) {
-        OpenModal("Calm down\nYou're doing that too fast");
+        OpenModal("Slow down<br>You're doing that too fast");
         return false;
     }
     lastUpdate = n;
@@ -82,9 +82,17 @@ function UpdateData() {
             console.log(res.data);
             if (res.code == 200) {
                 OpenModal("Saved");
+            } else if (res.code == 1006) {
+                OpenModal(
+                    "Couldn't create a new webhook in that channel.<br>I need MANAGE_WEBHOOK permission for this feature"
+                );
             } else {
+                console.log(res.data);
                 OpenModal("Oops failed to connect to api");
             }
         })
         .catch(console.log);
+}
+function SendHome() {
+    window.location.href = "/";
 }
