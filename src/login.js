@@ -2,7 +2,7 @@ window.onload = () => {
     var url = new URL(window.location.href);
     var code = url.searchParams.get("code");
     var token = Cookies.get("hash");
-    if (token.length) {
+    if (token) {
         document.getElementById("not_logged").style.display = "none";
         document.getElementById("logging_in").style.display = "none";
         document.getElementById("logged_in").style.display = "block";
