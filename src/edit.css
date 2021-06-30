@@ -21,6 +21,7 @@ body {
 .autopost_nsfw {
     background-color: transparent;
     padding: 10px;
+    max-width: 100%;
     margin-bottom: 10px;
     border-radius: 10px;
     border: 2px solid #6665d2;
@@ -75,4 +76,9 @@ body {
 }
 #homebtn {
     background-color: #ed4245;
+}
+@media only screen and (min-width: 800px) {
+    .autopost_memes, .autopost_nsfw {
+        max-width: 50%;
+    }
 }
