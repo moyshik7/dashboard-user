@@ -4,6 +4,7 @@ function main() {
         //Redirect to /login
         document.location.href = "/login/";
     } else {
+        document.getElementById('loader').style.display = "block"
         document.getElementById("username").innerHTML = Cookies.get("username");
         document.getElementById("avatarurl").src = Cookies.get("avatar");
         if (!Cookies.get("guilds")) {
@@ -33,6 +34,7 @@ function main() {
             });
             gl.appendChild(nnn);
         });
+        document.getElementById('loader').style.display = "none"
     }
 }
 main();

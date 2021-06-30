@@ -6,17 +6,17 @@ var lastUpdate = 0;
 window.onload = () => {
     if (!Cookies.get("guilds")) {
         //Back to login
-        return (window.location.href = "/login/index.html");
+        return (window.location.href = "/login/");
     }
     if (!Cookies.get("editing")) {
         //Back to home
-        return (window.location.href = "/index.html");
+        return (window.location.href = "/");
     }
     var allGuilds = JSON.parse(Cookies.get("guilds"));
     var Guild = allGuilds.find((g) => g.id === Cookies.get("editing"));
     if (!Guild) {
         //Back to home
-        return (window.location.href = "/index.html");
+        return (window.location.href = "/");
     }
     document.getElementById("topbar_guild__name").innerHTML = Guild.name;
     fetch(`${apiURL}bot/guild?guild=${Guild.id}&token=${Cookies.get("hash")}`)
@@ -64,7 +64,7 @@ function UpdateData() {
             channel: memes.value,
             subreddit: "r/memes",
         },
-        meme: {
+        nsfw: {
             channel: nsfw.value,
             subreddit: "r/hentai",
         },
